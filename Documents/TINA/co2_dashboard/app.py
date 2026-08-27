@@ -497,6 +497,22 @@ st.markdown(
             visibility: visible !important;
             margin-bottom: 8px !important;
         }
+
+        /* Custom Sidebar Toggle styling to display ⚙️ Filters icon */
+        [data-testid="stSidebarCollapseButton"] button::before,
+        [data-testid="stSidebarExpandButton"] button::before {
+            content: "⚙️ Filters";
+            font-weight: 600;
+            font-size: 14px;
+            color: #31333F;
+        }
+        
+        /* Hide the default tiny arrow icon inside the button */
+        [data-testid="stSidebarCollapseButton"] button svg,
+        [data-testid="stSidebarExpandButton"] button svg {
+            display: none !important;
+        }
+
         /* Hide radio circles across all Streamlit versions */
         div[data-testid="stRadio"] input[type="radio"],
         div[data-testid="stRadio"] div[role="radiogroup"] > label > div:first-child,
